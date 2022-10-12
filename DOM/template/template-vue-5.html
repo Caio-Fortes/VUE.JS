@@ -1,0 +1,29 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app">
+    <!-- v-once é uma diretiva utilizada para ler o valor apenas uma vez. 
+    (enquanto os outros valores eles alteram sempre que o titulo é alterado na saudacao()) -->
+    <h1 v-once>{{ titulo }}</h1>
+    
+    <h2>{{ saudacao()}}</h2>
+    <a v-bind:href="link">Google</a>
+</div>
+
+<script>
+new Vue({
+    el: '#app',
+    data:{
+        titulo: 'Usando VUEJS',
+        link: 'https://www.google.com.br'
+    },
+    methods: {
+        saudacao: function(){
+            //titulo está recebendo um novo valor e mostra
+            this.titulo = 'Bom dia!'
+            return this.titulo
+
+            
+        },
+    },
+})
+</script>

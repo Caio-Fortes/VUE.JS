@@ -1,0 +1,18 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app">
+  <p>Utilizando prevent:</p>
+  <a v-on:click href="http://google.com">google</a>
+  <p>Utilizando v-bind e prevent</p>
+  <a v-on:click.prevent v-bind:href="link">google</a>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data:{
+    link: 'https://www.google.com.br'
+  }
+})
+
+</script>
