@@ -1,31 +1,22 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
+<!-- utilizando funções no template VUE -->
+
 <div id="app">
-    <h1>{{ titulo }}</h1>
-    <h2>{{ saudacao()}}</h2>
-    <h2>{{bomdia()}}</h2>
-    <h2>{{boatarde()}}</h2>
+<p>{{falarSaudacao()}}</p>
 </div>
 
 <script>
 new Vue({
     el: '#app',
     data:{
-        titulo: 'Usando VUEJS'
+        saudacao: ''
     },
-    methods: {
-        saudacao: function(){
-            return 'Olá tenha uma boa semana!!'
-        },
-        adeus:function(){
-          return 'até logo'  
-        },
-        bomdia: function(){
-          return 'bom dia'  
-        },
-        boatarde:function(){
-            return 'Boa tarde'
+    methods:{
+        falarSaudacao(){
+            return this.saudacao = 'Hello World!'
         }
-    },
+    }
+
 })
 </script>

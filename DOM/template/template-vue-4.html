@@ -1,11 +1,9 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
 <div id="app">
-    <h1>{{ titulo }}</h1>
-    <h2>{{ saudacao()}}</h2>
-
     <!-- Usando a diretiva v-bind para realizar a ligação entre o html e os dados do data do VUE-->
     <a v-bind:href="link">Google</a>
+    <img v-bind:src="image">
 </div>
 
 
@@ -13,13 +11,8 @@
 new Vue({
     el: '#app',
     data:{
-        titulo: 'Usando VUEJS',
-        link: 'https://www.google.com.br'
-    },
-    methods: {
-        saudacao: function(){
-            return 'Olá tenha uma boa semana!!'
-        },
-    },
+        link: 'https://www.google.com.br',
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Q2ileZivdw1I-Fj43fymDmTIVz0NJSRqBxw_mR4kfg&s"
+    }
 })
 </script>
