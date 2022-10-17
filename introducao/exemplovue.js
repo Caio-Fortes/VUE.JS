@@ -1,6 +1,6 @@
-new Vue ({
+new Vue({
     el: '#app',
     data:{
-        testevue:'Teste Vue introducao'
+        saudacao: 'hello Vue!'
     }
 })
