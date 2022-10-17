@@ -3,6 +3,7 @@ new Vue({
     data:{
         nome: 'Caio',
         idade: 19,
+        imageLink: 'https://files.tecnoblog.net/wp-content/uploads/2020/03/google-imagens.jpg'
     },
     methods: {
         multiplicarIdade(){

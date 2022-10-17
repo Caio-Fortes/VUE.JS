@@ -10,14 +10,13 @@
 <!-- 3) Chame uma função para exibir um número randomico entre 0 and 1 (Math.random()) -->
 <p>Numero aleatório: {{gerarNumAleatorio()}}</p>
     
-    <!-- 4) Procure uma imagem no google e exiba na tag img 
-        fazendo o binding no atributo "src" -->
-    <div>
-    </div><br>
-    
-    <!-- 5) Inicialize o input com o seu nome (use o atributo "value") -->
-    <div>
-    </div>
+<!-- 4) Procure uma imagem no google e exiba na tag img fazendo o binding no atributo "src" -->
+
+<p> Utilizando v-bind</p>
+    <img v-bind:src="imageLink" alt="imagem vue" style="width: 150px;">
+
+<!-- 5) Inicialize o input com o seu nome (use o atributo "value") -->
+<input type="text" v-bind:value="nome"></input>
 
 </div>
 <script src="app.js"></script>
