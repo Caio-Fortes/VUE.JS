@@ -1,22 +1,16 @@
 new Vue({
-    el: '#desafio',
-    data: ({
+    el:'#desafio',
+    data:{
         nome: 'Caio',
         idade: 19,
-        link: 'https://i.pinimg.com/474x/ea/80/03/ea8003eda835af024292148060887ed4.jpg'
-    }),
+        imageLink: 'https://files.tecnoblog.net/wp-content/uploads/2020/03/google-imagens.jpg'
+    },
     methods: {
-        multiplicar:function(){
+        multiplicarIdade(){
             return this.idade * 3
         },
-        aleatorio:function(){
+        gerarNumAleatorio(){
             return Math.floor(Math.random() * 2)
         },
-        mudarTexto(evento){
-            this.nome = event.target.value
-
-        }
-    
     }
-
 })
