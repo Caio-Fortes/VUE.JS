@@ -1,0 +1,33 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app">
+    <button v-on:click="aumentar(5)"> +1</button>
+    <h1> Contador: {{contador}}</h1>
+</div>
+
+<script>
+
+new Vue({
+    el:'#app',
+    data: {
+        contador: 0
+    },
+
+    methods:{
+        aumentar(contarCinco){
+            return this.contador += contarCinco
+        }
+    },
+
+    watch: {
+        contador(){
+            console.table(this.contador)
+            setTimeout(() => {
+                this.contador = 0
+            }, 2000)
+
+        }
+    }
+
+})
+</script>

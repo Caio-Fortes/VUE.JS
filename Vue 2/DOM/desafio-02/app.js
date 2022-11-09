@@ -1,15 +1,15 @@
 new Vue({
-    el: '#desafio',
-    data: {
-        valor: 'valor'
+    el: '#app2',
+    data:{
+        valor: ''
     },
-    methods: {
-        exibirAlerta(){
-            alert('Você está sendo alertado!')
+    
+    methods:{
+        alertar(){
+            alert('vc foi avisado!')
         },
-        mudarValor(evento){
+        alterar(e){
             this.valor = event.target.value
         }
-        
-    },
+    }
 })

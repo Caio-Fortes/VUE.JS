@@ -1,0 +1,31 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app">
+    <button v-on:click="somar()"> 
+        Clique aqui para uma ação
+    </button>
+
+    <h1>utilizando o componente de forma natural</h1>
+    <p>{{contador}} </p>
+
+    <h1> utilizando intepolação</h1>
+    <p>{{contador * 2}}</p> 
+
+    <p>{{contador > 10 ? 'Os numeros são Maior que 10' : 'Os numeros são Menor que 10' }} </p>
+    (faz referência do contador que ainda não está utilizando interpolação)
+
+</div>
+
+<script>
+new Vue({
+    el:'#app',
+    data:{
+        contador: 0
+    },
+    methods:{
+        somar(){
+            this.contador++
+        }
+    }
+})
+</script>

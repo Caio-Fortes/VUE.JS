@@ -1,25 +1,30 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
-<!-- utilizando alguma ação vue de acordo com a ação que o usuário aperta o teclado. -->
 <div id="app">
-  <p>Utilizando o keyup com a tecla d</p>
-  <input type="text" v-on:keyup.d="exibirAlerta"></input>
+    <p v-on:mousemove="atualiazarXY">MOUSE: {{x}} e {{y}}
+      <span v-on:mousemove.stop>parar</span>
+    </p>
 
-  <p>Encadeando Utilizando o keyup com a tecla  enter e alt</p>
-  <input type="text" v-on:keyup.alt.enter="exibirAlerta"></input>
+    <a href="http:/google.com"> Google</a><br><!--este link funiona-->
+
+    <a v-on:click.prevent="" href="http:/google.com"> Google</a> <!--este não funciona
+    previne a ação do click -->
 
 </div>
 
 <script>
 new Vue({
-  el: '#app',
-  data:{
-  },
-  methods: {
-    exibirAlerta(){
-      alert('Estou te alertando!  ')
-    }
-  },
+    el: '#app',
+    data:{
+        x: 0,
+        y: 0,
+    },
+    methods: {
+      atualiazarXY(event){
+        this.x = event.clientX
+        this.y = event.clientY
+      }
+},
 })
-
 </script>
+
